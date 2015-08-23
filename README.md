@@ -1,4 +1,5 @@
-https://travis-ci.org/DhyansProjects/kafka-elasticsearch-standalone-consumer.svg?branch=master
+
+[![Build Status](https://travis-ci.org/DhyansProjects/kafka-elasticsearch-standalone-consumer.svg?branch=master)](https://travis-ci.org/DhyansProjects/kafka-elasticsearch-standalone-consumer)
 
 # Welcome to the kafka-elasticsearch-standalone-consumer wiki!
 
