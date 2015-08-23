@@ -1,3 +1,5 @@
+https://travis-ci.org/DhyansProjects/kafka-elasticsearch-standalone-consumer.svg?branch=master
+
 # Welcome to the kafka-elasticsearch-standalone-consumer wiki!
 
 ## Illustration of kafka-elasticsearch-standalone-consumer usage
