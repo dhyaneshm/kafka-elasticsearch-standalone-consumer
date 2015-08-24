@@ -22,4 +22,5 @@ public interface IndexHandler {
 	public String getIndexName (HashMap<String, Object> indexLookupProperties);
 	public String getIndexType (HashMap<String, Object> indexLookupProperties);
 
+
 }
