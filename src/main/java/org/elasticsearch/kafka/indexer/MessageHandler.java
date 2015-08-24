@@ -1,12 +1,7 @@
 package org.elasticsearch.kafka.indexer;
 
-import java.lang.reflect.InvocationTargetException;
-import java.nio.ByteBuffer;
-import java.util.Iterator;
-
 import kafka.message.Message;
 import kafka.message.MessageAndOffset;
-
 import org.elasticsearch.ElasticsearchException;
 import org.elasticsearch.action.bulk.BulkItemResponse;
 import org.elasticsearch.action.bulk.BulkRequestBuilder;
@@ -14,6 +9,10 @@ import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.client.Client;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.lang.reflect.InvocationTargetException;
+import java.nio.ByteBuffer;
+import java.util.Iterator;
 
 
 public abstract class MessageHandler {
@@ -25,6 +24,7 @@ public abstract class MessageHandler {
 	private IndexHandler indexHandler;
 		
 	public MessageHandler(Client client,ConsumerConfig config) throws Exception{
+
 		this.esClient = client;
 		this.config = config;
 		this.bulkRequestBuilder = null;
