@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/DhyansProjects/kafka-elasticsearch-standalone-consumer.svg?branch=master)](https://travis-ci.org/DhyansProjects/kafka-elasticsearch-standalone-consumer)
+[![Build Status](https://travis-ci.org/DhyansProjects/kafka-elasticsearch-standalone-consumer.svg?branch=master)](https://travis-ci.org/DhyansProjects/kafka-elasticsearch-standalone-consumer)[![Coverage Status](https://coveralls.io/repos/DhyansProjects/kafka-elasticsearch-standalone-consumer/badge.svg?branch=master&service=github)](https://coveralls.io/github/DhyansProjects/kafka-elasticsearch-standalone-consumer?branch=master)
 
 # Welcome to the kafka-elasticsearch-standalone-consumer wiki!
 
