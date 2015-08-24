@@ -198,6 +198,7 @@
 				<artifactId>coveralls-maven-plugin</artifactId>
 				<version>3.2.0</version>
 				<configuration>
+					<sourceEncoding>UTF-8</sourceEncoding>
 					<repoToken>nvU7JtDgae1cOlQzL52GyyjrfKWEs3Vjr</repoToken>
 				</configuration>
 			</plugin>
