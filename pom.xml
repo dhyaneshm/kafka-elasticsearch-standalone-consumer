@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.elasticsearch.kafka.consumer</groupId>
 	<artifactId>kafka-es-consumer</artifactId>
-	<version>${buildId}.${buildNumber}</version>
+	<version>${TRAVIS_BUILD_ID}.${TRAVIS_BUILD_NUMBER}</version>
 	<packaging>jar</packaging>
 	<description>Kafka standalone indexer for elasticsearch</description>
 	<inceptionYear>2014</inceptionYear>
