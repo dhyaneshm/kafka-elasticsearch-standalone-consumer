@@ -215,6 +215,17 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.3.2</version>
+			</plugin>
 		</plugins>
 	</build>
+	<distributionManagement>
+		<repository>
+			<id>bintray-id-kafka-elastic-search</id>
+			<url>https://dl.bintray.com/dhyansprojects/publicrepo/mavenpackage</url>
+		</repository>
+	</distributionManagement>
 </project>
