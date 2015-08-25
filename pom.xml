@@ -225,7 +225,7 @@
 	<distributionManagement>
 		<repository>
 			<id>bintray-id-kafka-elastic-search</id>
-			<url>https://dl.bintray.com/dhyansprojects/publicrepo/mavenpackage</url>
+			<url>https://dl.bintray.com/dhyansprojects/publicrepo/mavenpackage;publish=1</url>
 		</repository>
 	</distributionManagement>
 </project>
