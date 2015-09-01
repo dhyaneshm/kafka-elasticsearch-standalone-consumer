@@ -22,13 +22,15 @@
 
 
     "version": {
-        "name": "1.0.0",
+        "name": "1.0.0"
     },
 
 
     "files":
         [
-        {"includePattern": "build/bin(.*)*/(.*\.jar)", "excludePattern": ".*/do-not-deploy/.*", "uploadPattern": "libs/$2"}
+        {"includePattern": "build/bin(.*)*/(.*\.jar)",
+         "excludePattern": ".*/do-not-deploy/.*",
+         "uploadPattern": "libs/$2"}
         ],
     "publish": true
 }
