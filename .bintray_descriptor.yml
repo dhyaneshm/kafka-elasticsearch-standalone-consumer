@@ -1,12 +1,10 @@
 {
-    /* Bintray package information.
-       In case the package already exists on Bintray, only the name, repo and subject
-       fields are mandatory. */
+
 
     "package": {
-        "name": "kafka-elasticsearch-standalone-consumer", // Bintray package name
-        "repo": "publicmavenrepo", // Bintray repository name
-        "subject": "dhyansprojects", // Bintray subject (user or organization)
+        "name": "kafka-elasticsearch-standalone-consumer",
+        "repo": "publicmavenrepo",
+        "subject": "dhyansprojects",
         "desc": "I was pushed completely automatically",
         "website_url": "www.jfrog.com",
         "issue_tracker_url": "https://github.com/bintray/bintray-client-java/issues",
@@ -24,13 +22,15 @@
 
 
     "version": {
-        "name": "1.0.0",
+        "name": "1.0.0"
     },
 
 
     "files":
         [
-        {"includePattern": "build/bin(.*)*/(.*\.jar)", "excludePattern": ".*/do-not-deploy/.*", "uploadPattern": "libs/$2"}
+        {"includePattern": "build/bin(.*)*/(.*\.jar)",
+         "excludePattern": ".*/do-not-deploy/.*",
+         "uploadPattern": "libs/$2"}
         ],
     "publish": true
 }
