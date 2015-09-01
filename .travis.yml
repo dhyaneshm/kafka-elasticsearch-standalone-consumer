@@ -6,8 +6,6 @@ after_success:
 - mvn clean test jacoco:report coveralls:report
 - echo TRAVIS_PULL_REQUEST = "${TRAVIS_PULL_REQUEST}" && echo TRAVIS_JDK_VERSION =
   “${TRAVIS_JDK_VERSION}” && echo TRAVIS_TAG = "${TRAVIS_TAG}"
-#- test "${TRAVIS_PULL_REQUEST}" == "false" && test “${TRAVIS_JDK_VERSION}” == “oraclejdk8″
-#  &&  mvn deploy --settings settings.xml
 branches:
   only:
   - master
@@ -18,6 +16,7 @@ env:
 deploy:
   provider: bintray
   user: dhyaneshm
-  key: 1af35df22a81c6553814097305574cd1596b93fd
+  key:
+    secure: GjGPmw3/Dg+c2sf02bjdcoH9DBDtKMPqvDO2igeYyz4WQazcEtj0YwcVbKtd16/+l2kmcmyRGu1n2dctUX91la+ZPK5Xph7NsHD8oEpAQ3esFLWP0LCH6bMzc9GUq5BhuOVFTsn4mhOkp/zQNnFz8X6X/id2JsVYTtWpFGIzVARXKdHYWlmRYJwamCPnDTWnMtp++SL/wFdbI2PoXWHBP8E/Ll6ou5c/fKsvkgmvpnbKI+EmmpmtWHMp6kGO159jClqLIhIQLr1J3HPTQU7Bisa5fW6q4wRLxhMDiWvZuOKEI8AZajbY/fxTdV9lUr7RjlcnHxD3fAP7htsQNVr1beKyQESjaReQNcbqCmNxAW4Pw69FZH81gsqx0oBtA5ZG32gZJ2+dMnssg4BQNcyg1Ri01uDwEWki31dCdG1KOMiZmslOg83JaiqOGI8vXlZ/E0mf9Ls7UOF0VuraphlpdCl0pKp7Xg2u5QnTVQ9D4tKegNpgMz1hnfeiPEOFoarNDWOJaoxWvE0x9PTPPSaPWXK36mztVZKb6brp4Wit7OLJ04I7d2zhTQQbzgIVSGgdDwY9DufqkwlulDDl/gKZGbGOtQ1z/pmlqrUMDbTXBJcObemhmVu0Vm2/doeZBx9js8/510201SvFU97u4B0xo97H4OwTBjV64GB8TIS/TP4=
   edge: true
   file: .bintray_descriptor.yml
