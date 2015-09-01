@@ -28,7 +28,7 @@
 
     "files":
         [
-        {"includePattern": "build/bin(.*)*/(.*\.jar)",
+        {"includePattern": "*.jar",
          "excludePattern": ".*/do-not-deploy/.*",
          "uploadPattern": "libs/$2"}
         ],
