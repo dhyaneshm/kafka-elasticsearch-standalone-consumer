@@ -10,6 +10,7 @@ branches:
   only:
   - master
 deploy:
+  user: dhyaneshm
   provider: bintray
   file: .bintray_descriptor.yml
 env:
