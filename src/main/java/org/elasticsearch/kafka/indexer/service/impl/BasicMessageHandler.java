@@ -34,9 +34,9 @@ public class BasicMessageHandler implements IMessageHandler {
     @Autowired
 	@Qualifier("elasticSearchClientService")
     private ElasticSearchClientService elasticSearchClientService;
-    @Autowired
+   /* @Autowired
 	@Qualifier("indexHandler")
-    private IIndexHandler elasticIndexHandler;
+    private IIndexHandler elasticIndexHandler;*/
     
 	private static final Logger logger = LoggerFactory.getLogger(BasicMessageHandler.class);
 	private Map<String, BulkRequestBuilder> bulkRequestBuilders;
@@ -46,38 +46,6 @@ public class BasicMessageHandler implements IMessageHandler {
 	   logger.info("BasicMessageHandler initialized Ok; using ElasticSearchClientService instance = {}", 
 			   elasticSearchClientService);
     }
-
-	public long prepareForPostToElasticSearch(Iterator<MessageAndOffset> messageAndOffsetIterator){
-		bulkRequestBuilders = new HashMap<>();
-		int numProcessedMessages = 0;
-		int numSkippedIndexingMessages = 0;
-		int numMessagesInBatch = 0;
-		long offsetOfNextBatch = 0;
-		while(messageAndOffsetIterator.hasNext()) {
-			numMessagesInBatch++;
-			MessageAndOffset messageAndOffset = messageAndOffsetIterator.next();
-			offsetOfNextBatch = messageAndOffset.nextOffset();
-			Message message = messageAndOffset.message();
-			ByteBuffer payload = message.payload();
-			byte[] bytesMessage = new byte[payload.limit()];
-			payload.get(bytesMessage);
-
-			try {
-				processMessage(bytesMessage);
-				numProcessedMessages++;
-			} catch (Exception e) {
-				numSkippedIndexingMessages++;
-				String msgStr = new String(bytesMessage);
-				logger.error("ERROR processing message at offset={} - skipping it: {}",messageAndOffset.offset(), msgStr, e);
-				FailedEventsLogger.logFailedToTransformEvent(messageAndOffset.offset(), e.getMessage(), msgStr);
-			}
-		}
-		logger.info("Total # of messages in this batch: {}; " +
-                        "# of successfully transformed and added to Index: {}; # of skipped from indexing: {}; offsetOfNextBatch: {}",
-                numMessagesInBatch, numProcessedMessages, numSkippedIndexingMessages, offsetOfNextBatch);
-		return offsetOfNextBatch;
-	}
-
 
 	public void processMessage(byte[] bytesMessage) throws Exception {
 		// customize this behavior as needed in your own MessageHandler implementation class

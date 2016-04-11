@@ -81,13 +81,6 @@ public class BasicMessageHandlerTest {
 	public void tearDown() throws Exception {
 	}
 
-	/**
-	 * Test method for {@link org.elasticsearch.kafka.indexer.service.impl.BasicMessageHandler#prepareForPostToElasticSearch(java.util.Iterator)}.
-	 */
-	//@Test
-	public void testPrepareForPostToElasticSearch() {
-		fail("Not yet implemented");
-	}
 
 	/**
 	 * Test method for {@link org.elasticsearch.kafka.indexer.service.impl.BasicMessageHandler#processMessage(byte[])}.

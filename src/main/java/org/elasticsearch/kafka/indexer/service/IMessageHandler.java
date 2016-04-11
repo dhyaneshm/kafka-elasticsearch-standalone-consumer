@@ -1,11 +1,8 @@
 package org.elasticsearch.kafka.indexer.service;
 
-import kafka.message.MessageAndOffset;
-
-import java.util.Iterator;
-import java.util.concurrent.ExecutionException;
-
 import org.elasticsearch.client.transport.TransportClient;
+
+import java.util.concurrent.ExecutionException;
 
 /**
  * Created by dhyan on 1/28/16.
@@ -36,13 +33,6 @@ public interface IMessageHandler {
      * @throws Exception
      */
     public boolean postToElasticSearch() throws Exception;
-    
-    /**
-     * In most cases - do not customize this method, just delegate to the BasicMessageHandler implementation
-     * @param messageAndOffsetIterator
-     * @return
-     */
-    public long prepareForPostToElasticSearch(Iterator<MessageAndOffset> messageAndOffsetIterator);
     
     /**
      * In most cases - do not customize this method, just delegate to the BasicMessageHandler implementation
